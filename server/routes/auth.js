@@ -1,15 +1,15 @@
-const express = require('express')
-const router = express.Router()
+const express = require("express");
 
-// import middleware
-const {authCheck} = require("../middleware/auth")
+const router = express.Router();
 
-// import controllers 
-const {createOrUpdateUser} = require("../controller/auth")
+// middlewares
+const { authCheck, adminCheck } = require("../middlewares/auth");
 
-router.post('/create-or-update-user',  authCheck, createOrUpdateUser)
+// controller
+const { createOrUpdateUser, currentUser } = require("../controllers/auth");
 
+router.post("/create-or-update-user", authCheck, createOrUpdateUser);
+router.post("/current-user", authCheck, currentUser);
+router.post("/current-admin", authCheck, adminCheck, currentUser);
 
-module.exports = router
-
-
+module.exports = router;

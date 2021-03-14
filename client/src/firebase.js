@@ -1,19 +1,19 @@
-import firebase from "firebase/app";
+import firebase from 'firebase/app'
 import "firebase/auth"
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAE0NWeC0yx2Tuhwo8XZdH0_EBHb5q5SgA",
-    authDomain: "luvih-76d9c.firebaseapp.com",
-    projectId: "luvih-76d9c",
-    storageBucket: "luvih-76d9c.appspot.com",
-    messagingSenderId: "542838529501",
-    appId: "1:542838529501:web:c300a8fe3e588dcf612a34"
-};
-
+    apiKey: "AIzaSyDduv0mG0Y3FI2F0SBy_HQDKgwcYhLJ97A",
+    authDomain: "e-commerce-e1d02.firebaseapp.com",
+    projectId: "e-commerce-e1d02",
+    storageBucket: "e-commerce-e1d02.appspot.com",
+    messagingSenderId: "215219272621",
+    appId: "1:215219272621:web:402351889b597836553f24"
+  };
   // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 
-// export
-export const auth = firebase.auth();
-export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
+  // export
+  export const auth = firebase.auth();
+  export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
