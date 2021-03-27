@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { createOrUpdateUser } from "../../functions/auth";
 
 const Login = ({ history }) => {
-  const [email, setEmail] = useState("kandhukurivinodreddii.com");
+  const [email, setEmail] = useState("kandhukurivinodreddii@gmail.com");
   const [password, setPassword] = useState("123456789");
   const [loading, setLoading] = useState(false);
 
