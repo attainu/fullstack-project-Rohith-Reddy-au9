@@ -30,7 +30,9 @@ app.use(cors());
 readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
 
 // port
-const port = process.env.PORT || 8000;
+// const __dirname= path.resolve()
+// test
+
 
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, "/client/build")));
@@ -43,5 +45,8 @@ if(process.env.NODE_ENV === 'production') {
     res.send("Api running");
   });
 }
+
+const port = process.env.PORT || 8000;
+
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
