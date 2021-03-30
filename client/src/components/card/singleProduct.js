@@ -16,7 +16,6 @@ import _ from "lodash"
 
 const { TabPane } = Tabs;
 
-// child component
 const SingleProduct = ({ product, onStartClick, star }) => {
     const { title, images, description, _id } = product;
 
