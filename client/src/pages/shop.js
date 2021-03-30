@@ -57,7 +57,7 @@ const Shop = () => {
     });
 };
 
-  // 1. load products by default on page load
+  //  load products by default on page load
     const loadAllProducts = () => {
         getProductsByCount(20).then((p) => {
         setProducts(p.data);
@@ -66,7 +66,7 @@ const Shop = () => {
         });
     };
 
-  // 2. load products on user search input
+  //  load products on user search input
     useEffect(() => {
         const delayed = setTimeout(() => {
         fetchProducts({ query: text });
@@ -78,7 +78,7 @@ const Shop = () => {
         
     }, [text]);
 
-  // 3. load products based on price range
+  //  load products based on price range
     useEffect(() => {
         console.log("ok to request", products);
         fetchProducts({ price });
@@ -150,7 +150,7 @@ const Shop = () => {
 
 
 
-  // 6. show products by sub category
+  // show products by sub category
     const showSubs = () =>
         subs.map((s) => (
             <div
@@ -177,7 +177,7 @@ const Shop = () => {
             fetchProducts({ sub });
     };
 
-  // 7. show products based on brand name
+  // show products based on brand name
     const showBrands = () =>
         brands.map((b) => (
         <Radio
@@ -205,7 +205,7 @@ const Shop = () => {
         fetchProducts({ brand: e.target.value });
     };
 
-  // 8. show products based on color
+  // show products based on color
     const showColors = () =>
         colors.map((c) => (
         <Radio
