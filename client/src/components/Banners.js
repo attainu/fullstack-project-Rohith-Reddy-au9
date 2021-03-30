@@ -12,16 +12,8 @@ const Banner = () => {
                 <img className="d-block w-100" src={Sale} alt="First slide" />
                 </div>
                 
-            </div>
-            {/* <a className="carousel-control-prev"  role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-            </a> */}
-            </div>
+            </div> 
+         </div>
         </>
     )
 }
