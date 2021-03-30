@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-// middlewares
 const {authCheck, adminCheck} = require("../middleware/auth")
 
 const {upload, remove} = require("../controller/cloudinary")

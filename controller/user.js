@@ -5,7 +5,7 @@ const  Coupon = require("../models/coupon");
 const Order = require("../models/orders");
 
 exports.userCart = async (req, res) => {
-  // console.log(req.body); // {cart: []}
+
   const { cart } = req.body;
 
   let products = [];
@@ -33,7 +33,6 @@ exports.userCart = async (req, res) => {
     products.push(object);
   }
 
-  // console.log('products', products)
 
   let cartTotal = 0;
   for (let i = 0; i < products.length; i++) {
@@ -133,7 +132,7 @@ exports.couponApply = async ( req, res, next ) => {
     // calculate the total after discount
   let totalAfterDiscount = (
     cartTotal - (cartTotal * couponValidate.discount) / 100
-  ).toFixed(2); // 99.99
+  ).toFixed(2);
 
   Cart.findOneAndUpdate(
     { orderdBy: user._id },
@@ -145,8 +144,7 @@ exports.couponApply = async ( req, res, next ) => {
 
 
 exports.createOrder = async (req, res) => {
-  // console.log(req.body);
-  // return;
+
   const { paymentIntent } = req.body.stripeResponse;
 
   const user = await User.findOne({ email: req.user.email }).exec();
@@ -162,7 +160,7 @@ exports.createOrder = async (req, res) => {
   let bulkOption = products.map((item) => {
     return {
       updateOne: {
-        filter: { _id: item.product._id }, // IMPORTANT item.product
+        filter: { _id: item.product._id },
         update: { $inc: { quantity: -item.count, sold: +item.count } },
       },
     };

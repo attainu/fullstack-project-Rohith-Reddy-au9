@@ -6,7 +6,6 @@ const slugify = require("slugify")
 exports.create = async (req, res) => {
     try {
         const {name} = req.body
-        // console.log("category>>>>", name)
         res.json(await new Category({ name, slug: slugify(name)}).save())
         
     } catch (error) {

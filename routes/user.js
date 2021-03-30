@@ -30,10 +30,4 @@ router.post("/user/cart/coupon", authCheck, couponApply);
 
 
 
-// router.get("/userinfo", (req, res) => {
-//     res.json({
-//       data: "hey you hit node API of userInfo",
-//     });
-//   });
-
 module.exports = router

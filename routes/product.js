@@ -27,7 +27,6 @@ router.put("/product/star/:productId", authCheck, startRating);
 router.get('/product/related/:productId', relatedItems)
 
 // search or filters
-// router.post('/search/filters', SearchFilters)
 router.post("/search/filters", searchFilters);
 
 

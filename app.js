@@ -6,10 +6,8 @@ const mongoose = require('mongoose')
 const {readdirSync} = require('fs')
 require('dotenv').config()
 
-// MONGO_URL = "mongodb+srv://rohith:rohith06@cluster0.d3ltm.mongodb.net/Shopoz?retryWrites=true&w=majority"
 
 
-// const authRouter = require('./routes/auth')
 const app = express()
 
 app.use(cors())

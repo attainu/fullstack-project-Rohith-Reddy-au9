@@ -21,5 +21,3 @@ router.get("/category/subs/:_id", getSubCategories);
 
 module.exports = router
 
-
-// http://localhost:9000/api/category/subs/6051e3e41b4fb54f40f564a2
