@@ -5,9 +5,6 @@ import { getProductsByCount, ProductRemove } from '../../../function/product'
 import AdminProductCard from '../../../components/card/adminproductcard'
 import { toast } from "react-toastify";
 
-
-
-
 const AllProducts = () => {
 
     const { user } = useSelector((state) => ({...state}))
@@ -33,12 +30,7 @@ const AllProducts = () => {
     }
 
     const removeProduct = (slug) =>{
-            // let answer = window.confirm("Delete?");
-            // if (answer){
-            //     console.log("send delete request", slug);
-            // }
-
-
+            
         if(window.confirm("Are you sure you want to delete?")){
             ProductRemove(slug, user.token)
                 .then((res) =>{
