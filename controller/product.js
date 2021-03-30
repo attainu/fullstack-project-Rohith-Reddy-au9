@@ -66,26 +66,6 @@ exports.update = async (req, res) => {
   }
 };
 
-// without pagination
-
-// exports.list = async (req, res) => {
-//     try {
-//       const { sort, order, limit } = req.body
-//       const products = await Product.find({})
-//       .populate("category")
-//       .populate("subc")
-//       .sort([[sort, order]])
-//       .limit(limit)
-//       .exec()
-//       res.json(products)
-//     } catch (err) {
-//       console.log(err);
-//     }
-// }
-
-
-// with pagination
-
 exports.list = async (req, res) => {
     // console.table(req.body);
 
@@ -162,55 +142,6 @@ exports. relatedItems = async (req, res) => {
   .populate('subc')
   .populate("postedBy")
   .exec();
-  res.json(relatedProducts)
-}
-
-// search 
-
-// const handleQuery = async (req, res, query) => {
-//   const queryProducts = await Product.find({ $text: { $search: query } })
-//     .populate("category", "_id name")
-//     .populate("subc", "_id name")
-//     .populate("postedBy", "_id name")
-//     .exec();
-
-//   res.json(queryProducts);
-// };
-
-// const handlePrice = async (req, res, price) => {
-//   try{
-//     const priceProduct = await Product.find({
-//       price:{
-//         $gte: price[0],
-//         $lte: price[1]
-//       },
-//     })
-//     .populate('category', "_id name")
-//     .populate("subc", "_id name")
-//     .populate("postedBy", "_id name")
-//     .exec();
-
-//     res.json(priceProduct);
-//   } catch(err) {
-//     console.log(err)
-//   }
-// }
-
-// exports.searchFilters = async (req, res) => {
-//   const { query, price } = req.body;
-
-//   if (query) {
-//     console.log("query>>>>>>>", query);
-//     await handleQuery(req, res, query);
-//   }
-
-//   if (price !== undefined) {
-//     console.log("price>>>>>>>", price);
-//     await handlePrice(req, res, price);
-//   }
-// };
-
-
 
 
 const handleQuery = async (req, res, query) => {
