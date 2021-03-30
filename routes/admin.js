@@ -1,12 +1,12 @@
 const express = require("express");
-const { auth } = require("../firebase");
+const { auth } = require("../firebase/firebase");
 
 const router = express.Router();
 
 // middlewares
-const { authCheck, adminCheck } = require("../middlewares/auth");
+const { authCheck, adminCheck } = require("../middleware/auth");
 
-const { orders, orderStatus } = require("../controllers/admin");
+const { orders, orderStatus } = require("../controller/admin");
 
 // routes
 router.get("/admin/orders", authCheck, adminCheck, orders);

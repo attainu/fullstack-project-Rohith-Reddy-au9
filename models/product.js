@@ -7,7 +7,7 @@ const productSchema = new mongoose.Schema(
       type: String,
       trim: true,
       required: true,
-      maxlength: 32,
+      maxlength: 64,
       text: true,
     },
     slug: {
@@ -28,14 +28,14 @@ const productSchema = new mongoose.Schema(
       trim: true,
       maxlength: 32,
     },
-    category: {
+    category: { 
       type: ObjectId,
       ref: "Category",
     },
-    subs: [
+    subc: [
       {
         type: ObjectId,
-        ref: "Sub",
+        ref: "SubCategory",
       },
     ],
     quantity: Number,
@@ -56,7 +56,7 @@ const productSchema = new mongoose.Schema(
     },
     brand: {
       type: String,
-      enum: ["Apple", "Samsung", "Microsoft", "Lenovo", "ASUS"],
+      enum: ["Police", "4711", "PlayBoy", "Estle", "Swiss Image", "Plum", "Deborah Milano", "Ajmal", "Guess"],
     },
     ratings: [
       {
