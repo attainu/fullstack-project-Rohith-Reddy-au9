@@ -50,3 +50,6 @@ admin can add/update/remove the category, cupons, products and also  he can see 
 ### Signup
 
 * `/auth/signup`
+
+link https://shopohzz.netlify.app/
+
